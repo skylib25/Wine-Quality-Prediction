@@ -220,16 +220,6 @@ with col3:
     )
     st.markdown('<p class="range-info">Valid range: 8.4 – 14.9 %</p>', unsafe_allow_html=True)
 
-    wine_id = st.number_input(
-        "Wine ID", 
-        min_value=0, 
-        max_value=10000, 
-        value=0, 
-        step=1,
-        help="Unique identifier for the wine"
-    )
-    st.markdown('<p class="range-info">Valid range: 0 – 10000</p>', unsafe_allow_html=True)
-
 # Prepare input data
 input_data = pd.DataFrame({
     'fixed acidity': [fixed_acidity],
