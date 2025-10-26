@@ -49,13 +49,6 @@ st.markdown("""
         color: #8B0000;
         border: 3px solid #8B0000;
     }
-    .range-info {
-        font-size: 12px;
-        color: #666;
-        font-style: italic;
-        margin-top: -10px;
-        margin-bottom: 15px;
-    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -108,118 +101,98 @@ with col1:
     st.markdown("##### Acidity Features")
     fixed_acidity = st.number_input(
         "Fixed Acidity", 
-        min_value=4.6, 
-        max_value=15.9, 
+        min_value=0.0, 
+        max_value=20.0, 
         value=7.4, 
         step=0.1,
         help="Tartaric acid content (g/dm³)"
     )
-    st.markdown('<p class="range-info">Valid range: 4.6 – 15.9 g/dm³</p>', unsafe_allow_html=True)
-
     volatile_acidity = st.number_input(
         "Volatile Acidity", 
-        min_value=0.12, 
-        max_value=1.58, 
+        min_value=0.0, 
+        max_value=2.0, 
         value=0.70, 
         step=0.01,
         help="Acetic acid content (g/dm³)"
     )
-    st.markdown('<p class="range-info">Valid range: 0.12 – 1.58 g/dm³</p>', unsafe_allow_html=True)
-
     citric_acid = st.number_input(
         "Citric Acid", 
         min_value=0.0, 
-        max_value=1.0, 
+        max_value=1.5, 
         value=0.0, 
         step=0.01,
         help="Citric acid content (g/dm³)"
     )
-    st.markdown('<p class="range-info">Valid range: 0.0 – 1.0 g/dm³</p>', unsafe_allow_html=True)
-
     pH = st.number_input(
         "pH", 
-        min_value=2.74, 
-        max_value=4.01, 
+        min_value=2.5, 
+        max_value=4.5, 
         value=3.51, 
         step=0.01,
         help="pH value (0-14 scale)"
     )
-    st.markdown('<p class="range-info">Valid range: 2.74 – 4.01</p>', unsafe_allow_html=True)
 
 with col2:
     st.markdown("##### Chemical Properties")
     residual_sugar = st.number_input(
         "Residual Sugar", 
-        min_value=0.9, 
-        max_value=15.5, 
+        min_value=0.0, 
+        max_value=20.0, 
         value=1.9, 
         step=0.1,
         help="Sugar content (g/dm³)"
     )
-    st.markdown('<p class="range-info">Valid range: 0.9 – 15.5 g/dm³</p>', unsafe_allow_html=True)
-
     chlorides = st.number_input(
         "Chlorides", 
-        min_value=0.012, 
-        max_value=0.611, 
+        min_value=0.0, 
+        max_value=1.0, 
         value=0.076, 
         step=0.001,
         help="Salt content (g/dm³)"
     )
-    st.markdown('<p class="range-info">Valid range: 0.012 – 0.611 g/dm³</p>', unsafe_allow_html=True)
-
     sulphates = st.number_input(
         "Sulphates", 
-        min_value=0.33, 
-        max_value=2.0, 
+        min_value=0.0, 
+        max_value=2.5, 
         value=0.56, 
         step=0.01,
         help="Potassium sulphate content (g/dm³)"
     )
-    st.markdown('<p class="range-info">Valid range: 0.33 – 2.0 g/dm³</p>', unsafe_allow_html=True)
-
     density = st.number_input(
         "Density", 
-        min_value=0.99007, 
-        max_value=1.00369, 
+        min_value=0.98, 
+        max_value=1.01, 
         value=0.9978, 
         step=0.0001,
         help="Density (g/cm³)"
     )
-    st.markdown('<p class="range-info">Valid range: 0.99007 – 1.00369 g/cm³</p>', unsafe_allow_html=True)
 
 with col3:
     st.markdown("##### Sulfur Dioxide & Alcohol")
     free_sulfur_dioxide = st.number_input(
         "Free Sulfur Dioxide", 
-        min_value=1.0, 
-        max_value=72.0, 
+        min_value=0.0, 
+        max_value=100.0, 
         value=11.0, 
         step=1.0,
         help="Free SO₂ content (mg/dm³)"
     )
-    st.markdown('<p class="range-info">Valid range: 1 – 72 mg/dm³</p>', unsafe_allow_html=True)
-
     total_sulfur_dioxide = st.number_input(
         "Total Sulfur Dioxide", 
-        min_value=6.0, 
-        max_value=289.0, 
+        min_value=0.0, 
+        max_value=300.0, 
         value=34.0, 
         step=1.0,
         help="Total SO₂ content (mg/dm³)"
     )
-    st.markdown('<p class="range-info">Valid range: 6 – 289 mg/dm³</p>', unsafe_allow_html=True)
-
     alcohol = st.number_input(
         "Alcohol", 
-        min_value=8.4, 
-        max_value=14.9, 
+        min_value=8.0, 
+        max_value=15.0, 
         value=9.4, 
         step=0.1,
         help="Alcohol content (%)"
     )
-    st.markdown('<p class="range-info">Valid range: 8.4 – 14.9 %</p>', unsafe_allow_html=True)
-    
     wine_id = st.number_input(
         "Wine ID", 
         min_value=0, 
@@ -228,8 +201,6 @@ with col3:
         step=1,
         help="Unique identifier for the wine"
     )
-    st.markdown('<p class="range-info">Valid range: 0 – 10000</p>', unsafe_allow_html=True)
-
 
 # Prepare input data
 input_data = pd.DataFrame({
@@ -243,8 +214,7 @@ input_data = pd.DataFrame({
     'density': [density],
     'pH': [pH],
     'sulphates': [sulphates],
-    'alcohol': [alcohol],
-    'Id': [wine_id]
+    'alcohol': [alcohol]
 })
 
 # Add some spacing
@@ -336,9 +306,9 @@ with st.sidebar:
         - **Citric Acid**: 0.0 - 1.0 g/dm³
         - **Residual Sugar**: 0.9 - 15.5 g/dm³
         - **Chlorides**: 0.012 - 0.611 g/dm³
-        - **Free SO₂**: 1 - 72 mg/dm³
+        - **Free SO₂**: 1 - 68 mg/dm³
         - **Total SO₂**: 6 - 289 mg/dm³
-        - **Density**: 0.99007 - 1.00369 g/cm³
+        - **Density**: 0.99 - 1.00 g/cm³
         - **pH**: 2.74 - 4.01
         - **Sulphates**: 0.33 - 2.0 g/dm³
         - **Alcohol**: 8.4 - 14.9 %
