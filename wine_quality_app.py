@@ -64,8 +64,8 @@ st.title("🍷 Wine Quality Prediction System")
 st.markdown("""
     <div style='background-color: #f0f2f6; padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem;'>
         <h3 style='color: #8B0000; margin-top: 0;'>Welcome to the Wine Quality Predictor!</h3>
-        <p style='font-size: 16px;'>This application uses Machine Learning to predict whether a wine is of <strong>Good Quality</strong> or <strong>Bad Quality</strong> based on its chemical properties.</p>
-        <p style='font-size: 14px; margin-bottom: 0;'><em>Enter the wine features below and click "Predict Wine Quality" to get results.</em></p>
+        <p style='color: #8B0000; font-size: 16px;'>This application uses Machine Learning to predict whether a wine is of <strong>Good Quality</strong> or <strong>Bad Quality</strong> based on its chemical properties.</p>
+        <p style='color: #8B0000; font-size: 14px; margin-bottom: 0;'><em>Enter the wine features below and click "Predict Wine Quality" to get results.</em></p>
     </div>
     """, unsafe_allow_html=True)
 
