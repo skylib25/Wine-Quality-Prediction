@@ -138,7 +138,7 @@ col_good, col_bad = st.columns(2)
 with col_good:
     st.markdown("""
         <div style='background-color: #d6f5d6; padding:1rem; border-radius:10px; margin-bottom:1rem; border:2px solid #006400;'>
-        <strong>Example of GOOD Quality Wine</strong><br>
+        <strong style='color:#8B0000; font-size:16px;'>Example of GOOD Quality Wine</strong><br>
         <span style='color:#006400; font-size:14px'>
         fixed acidity: 7.4<br>
         volatile acidity: 0.35<br>
@@ -157,7 +157,7 @@ with col_good:
 with col_bad:
     st.markdown("""
         <div style='background-color: #ffd6d7; padding:1rem; border-radius:10px; margin-bottom:1rem; border:2px solid #8B0000;'>
-        <strong>Example of BAD Quality Wine</strong><br>
+        <strong style='color:#8B0000; font-size:16px;'>Example of BAD Quality Wine</strong><br>
         <span style='color:#8B0000; font-size:14px'>
         fixed acidity: 7.7<br>
         volatile acidity: 0.87<br>
