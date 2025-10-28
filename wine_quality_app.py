@@ -102,77 +102,6 @@ if not st.session_state.model_trained:
 # Create three columns for input layout
 st.markdown("### 📊 Enter Wine Features")
 
-# Example data for good and bad quality wine
-good_wine_example = {
-    'fixed acidity': 7.4,
-    'volatile acidity': 0.35,
-    'citric acid': 0.45,
-    'residual sugar': 6.1,
-    'chlorides': 0.071,
-    'free sulfur dioxide': 17.0,
-    'total sulfur dioxide': 60.0,
-    'density': 0.9968,
-    'pH': 3.20,
-    'sulphates': 0.68,
-    'alcohol': 12.0,
-    'Id': 1001
-}
-
-bad_wine_example = {
-    'fixed acidity': 7.7,
-    'volatile acidity': 0.87,
-    'citric acid': 0.0,
-    'residual sugar': 1.2,
-    'chlorides': 0.09,
-    'free sulfur dioxide': 5.0,
-    'total sulfur dioxide': 13.0,
-    'density': 0.9951,
-    'pH': 3.21,
-    'sulphates': 0.43,
-    'alcohol': 9.8,
-    'Id': 1002
-}
-
-# Display boxes for wine examples
-col_good, col_bad = st.columns(2)
-with col_good:
-    st.markdown("""
-        <div style='background-color: #d6f5d6; padding:1rem; border-radius:10px; margin-bottom:1rem; border:2px solid #006400;'>
-        <strong style='color:#8B0000; font-size:16px;'>Example of GOOD Quality Wine</strong><br>
-        <span style='color:#006400; font-size:14px'>
-        fixed acidity: 7.4<br>
-        volatile acidity: 0.35<br>
-        citric acid: 0.45<br>
-        residual sugar: 6.1<br>
-        chlorides: 0.071<br>
-        free sulfur dioxide: 17<br>
-        total sulfur dioxide: 60<br>
-        density: 0.9968<br>
-        pH: 3.20<br>
-        sulphates: 0.68<br>
-        alcohol: 12.0<br>
-        </span>
-        </div>
-        """, unsafe_allow_html=True)
-with col_bad:
-    st.markdown("""
-        <div style='background-color: #ffd6d7; padding:1rem; border-radius:10px; margin-bottom:1rem; border:2px solid #8B0000;'>
-        <strong style='color:#8B0000; font-size:16px;'>Example of BAD Quality Wine</strong><br>
-        <span style='color:#8B0000; font-size:14px'>
-        fixed acidity: 7.7<br>
-        volatile acidity: 0.87<br>
-        citric acid: 0.0<br>
-        residual sugar: 1.2<br>
-        chlorides: 0.09<br>
-        free sulfur dioxide: 5<br>
-        total sulfur dioxide: 13<br>
-        density: 0.9951<br>
-        pH: 3.21<br>
-        sulphates: 0.43<br>
-        alcohol: 9.8<br>
-        </span>
-        </div>
-        """, unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns(3)
 
@@ -301,6 +230,79 @@ with col3:
         help="Unique identifier for the wine"
     )
     st.markdown('<p class="range-info">Valid range: 0 – 10000</p>', unsafe_allow_html=True)
+
+# Example data for good and bad quality wine
+good_wine_example = {
+    'fixed acidity': 7.4,
+    'volatile acidity': 0.35,
+    'citric acid': 0.45,
+    'residual sugar': 6.1,
+    'chlorides': 0.071,
+    'free sulfur dioxide': 17.0,
+    'total sulfur dioxide': 60.0,
+    'density': 0.9968,
+    'pH': 3.20,
+    'sulphates': 0.68,
+    'alcohol': 12.0,
+    'Id': 1001
+}
+
+bad_wine_example = {
+    'fixed acidity': 7.7,
+    'volatile acidity': 0.87,
+    'citric acid': 0.0,
+    'residual sugar': 1.2,
+    'chlorides': 0.09,
+    'free sulfur dioxide': 5.0,
+    'total sulfur dioxide': 13.0,
+    'density': 0.9951,
+    'pH': 3.21,
+    'sulphates': 0.43,
+    'alcohol': 9.8,
+    'Id': 1002
+}
+
+# Display boxes for wine examples
+col_good, col_bad = st.columns(2)
+with col_good:
+    st.markdown("""
+        <div style='background-color: #d6f5d6; padding:1rem; border-radius:10px; margin-bottom:1rem; border:2px solid #006400;'>
+        <strong style='color:#8B0000; font-size:16px;'>Example of GOOD Quality Wine</strong><br>
+        <span style='color:#006400; font-size:14px'>
+        fixed acidity: 7.4<br>
+        volatile acidity: 0.35<br>
+        citric acid: 0.45<br>
+        residual sugar: 6.1<br>
+        chlorides: 0.071<br>
+        free sulfur dioxide: 17<br>
+        total sulfur dioxide: 60<br>
+        density: 0.9968<br>
+        pH: 3.20<br>
+        sulphates: 0.68<br>
+        alcohol: 12.0<br>
+        </span>
+        </div>
+        """, unsafe_allow_html=True)
+with col_bad:
+    st.markdown("""
+        <div style='background-color: #ffd6d7; padding:1rem; border-radius:10px; margin-bottom:1rem; border:2px solid #8B0000;'>
+        <strong style='color:#8B0000; font-size:16px;'>Example of BAD Quality Wine</strong><br>
+        <span style='color:#8B0000; font-size:14px'>
+        fixed acidity: 7.7<br>
+        volatile acidity: 0.87<br>
+        citric acid: 0.0<br>
+        residual sugar: 1.2<br>
+        chlorides: 0.09<br>
+        free sulfur dioxide: 5<br>
+        total sulfur dioxide: 13<br>
+        density: 0.9951<br>
+        pH: 3.21<br>
+        sulphates: 0.43<br>
+        alcohol: 9.8<br>
+        </span>
+        </div>
+        """, unsafe_allow_html=True)
+
 
 # Prepare input data
 input_data = pd.DataFrame({
