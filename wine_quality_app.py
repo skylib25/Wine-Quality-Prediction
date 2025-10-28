@@ -231,6 +231,12 @@ with col3:
     )
     st.markdown('<p class="range-info">Valid range: 0 – 10000</p>', unsafe_allow_html=True)
 
+# Create prediction button
+col_left, col_center, col_right = st.columns([1, 2, 1])
+with col_center:
+    predict_button = st.button("🔮 Predict Wine Quality")
+
+
 # Example data for good and bad quality wine
 good_wine_example = {
     'fixed acidity': 7.4,
@@ -323,10 +329,6 @@ input_data = pd.DataFrame({
 # Add some spacing
 st.markdown("<br>", unsafe_allow_html=True)
 
-# Create prediction button
-col_left, col_center, col_right = st.columns([1, 2, 1])
-with col_center:
-    predict_button = st.button("🔮 Predict Wine Quality")
 
 # Make prediction
 if predict_button:
