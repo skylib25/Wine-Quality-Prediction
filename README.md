@@ -11,7 +11,7 @@ This app is already deployed and ready to use. Access it at: wine-quality-skylib
 - Predicts wine quality using a trained Random Forest Classifier
 - Validates inputs with proper chemical property ranges
 - Displays confidence scores for each prediction
-- Classifies wines as Good Quality (score >= 7) or Bad Quality (score < 7)
+- Classifies wines as Good Quality (score >= 6) or Bad Quality (score < 6)
 
 ## How to Use the App
 
