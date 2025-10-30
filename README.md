@@ -4,7 +4,7 @@ A machine learning web application that predicts wine quality based on physicoch
 
 ## Quick Start
 
-This app is already deployed and ready to use. Access it at: YOUR_DEPLOYED_APP_URL_HERE
+This app is already deployed and ready to use. Access it at: wine-quality-skylib.streamlit.io
 
 ## What This App Does
 
@@ -88,8 +88,8 @@ Prerequisites:
 Installation Steps:
 
 1. Clone the repository:
-git clone https://github.com/YOUR_USERNAME/REPO_NAME.git
-cd REPO_NAME
+git clone https://github.com/skylib25/Wine-Quality-Prediction
+cd Wine-Quality-Prediction
 
 2. Install dependencies:
 pip install streamlit pandas numpy scikit-learn
@@ -110,14 +110,6 @@ wine_quality_scaler.pkl - Feature scaler (StandardScaler)
 requirements.txt - Python dependencies
 README.md - This file
 
-## About the Model
-
-Algorithm: Random Forest Classifier
-Training Accuracy: 76.26%
-Testing Accuracy: 77.73%
-Dataset: UCI Wine Quality Dataset (Red Wine)
-Features: 11 physicochemical properties
-Classification: Good (Quality >= 6) vs Bad (Quality < 6)
 
 ## How It Works
 
@@ -129,18 +121,8 @@ Classification: Good (Quality >= 6) vs Bad (Quality < 6)
 
 ## Dataset Reference
 
-Original Dataset Citation:
-Cortez, P., Cerdeira, A., Almeida, F., Matos, T., and Reis, J. (2009). Modeling wine preferences by data mining from physicochemical properties. Decision Support Systems, 47(4), 547-553.
+Dataset Source: https://www.kaggle.com/datasets/yasserh/wine-quality-dataset
 
-Dataset Source: https://archive.ics.uci.edu/ml/datasets/wine+quality
-
-## Technologies Used
-
-Frontend: Streamlit
-ML Framework: Scikit-learn
-Data Processing: Pandas, NumPy
-Model Serialization: Pickle
-Deployment: Streamlit Cloud
 
 ## Deploy Your Own Version
 
@@ -157,34 +139,3 @@ Set main file path: wine_quality_app.py
 Click "Deploy"
 
 Your app will be live in minutes and will get its own URL.
-
-## Support
-
-Having issues or questions:
-
-Check the live app: YOUR_DEPLOYED_APP_URL_HERE
-Report issues: Open an issue on GitHub
-Contact: your.email@example.com
-
-## Author
-
-Your Name
-GitHub: https://github.com/your-username
-Project Link: YOUR_DEPLOYED_APP_URL_HERE
-
-## License
-
-This project is open source and available under the MIT License.
-
-## Acknowledgments
-
-UCI Machine Learning Repository for the wine quality dataset
-Streamlit for the web framework
-Scikit-learn for machine learning tools
-
-## Quick Links
-
-Live App: YOUR_DEPLOYED_APP_URL_HERE
-Dataset Source: https://archive.ics.uci.edu/ml/datasets/wine+quality
-Streamlit Documentation: https://docs.streamlit.io/
-Scikit-learn Documentation: https://scikit-learn.org/
